@@ -3,7 +3,7 @@ title: "Air pollution monitoring by the Texas Commission on Environmental Qualit
 output: html_document
 ---
 
-Data and [R](https://www.r-project.org/) code to reproduce the analysis underlying [this]() Oct. 6, 2024 Inside Climate News article, examining air pollution monitoring by the Texas Commission on Environmental Quality.
+Data and [R](https://www.r-project.org/) code to reproduce the analysis underlying [this](https://insideclimatenews.org/news/06102024/texas-diminished-air-pollution-monitoring-team/) Oct. 6, 2024 Inside Climate News article, examining air pollution monitoring by the Texas Commission on Environmental Quality.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, error = FALSE)
