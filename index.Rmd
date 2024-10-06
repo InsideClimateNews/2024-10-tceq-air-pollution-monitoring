@@ -1,0 +1,155 @@
+---
+title: "Air pollution monitoring by the Texas Commission on Environmental Quality"
+output: html_document
+---
+
+Data and [R](https://www.r-project.org/) code to reproduce the analysis underlying [this]() Oct. 6, 2024 Inside Climate News article, examining air pollution monitoring by the Texas Commission on Environmental Quality.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, error = FALSE)
+```
+
+### Setting up
+
+```{r message=FALSE}
+# load required packages
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(scales)
+library(knitr)
+library(kableExtra)
+```
+
+### Mobile monitoring projects run by calendar year
+
+Through public records requests, we obtained data on projects run by TCEQ's central mobile monitoring team. This Austin-based team operates vans fitted with sophisticated equipment including mass spectrometers, which can identify and measure concentrations of pollutants in sampled air. We excluded data for two monitoring projects labeled as being conducted for staff training or instrument calibration.
+
+```{r message=FALSE}
+# load data and assign a type to each project
+mobile_monitoring_files <- list.files("data", pattern = "monitoring", full.names = TRUE)
+mobile_monitoring <- map_dfr(mobile_monitoring_files, read_csv) %>%
+  mutate(type = case_when(!is.na(emergency_response) ~ "Emergency response",
+                          grepl("no summary report", ignore.case = TRUE, notes) ~ "No summary report",
+         TRUE ~ "Proactive monitoring"))
+```
+
+Note, some projects prior to 2016 include two periods of sampling in the field. For these we calculated the duration of each project as the time actually spent in the field. Projects from 2016 onward have a single date range, for which we calculated the total duration.
+
+```{r message=FALSE}
+# calculate duration for each project and extract year from start date
+mobile_monitoring <- mobile_monitoring %>%
+  mutate(duration = case_when(is.na(end2) ~ end1 - start1 + 1,
+                              TRUE ~ (end1 - start1 + 1) + (end2 - start2 + 1)),
+         year = year(start1))
+
+# summary by complete calendar year
+mobile_monitoring_year <- mobile_monitoring %>%
+  group_by(year,type) %>%
+  summarize(projects = n(),
+            total_duration = sum(duration, na.rm = TRUE)) %>%
+  filter(year < 2024)
+```
+
+```{r message=FALSE}
+ggplot(mobile_monitoring_year, aes(x = year, y = projects, fill = type)) +
+  geom_col() +
+  geom_hline(yintercept = 0, linewidth = 0.3) +
+  xlab("") +
+  ylab("Number of projects") +
+  ggtitle("Mobile monitoring projects by calendar year") +
+  scale_fill_manual(values = c("#e41a1c","#377eb8","#cccccc"), name = "") +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.position = "top")
+```
+
+```{r message=FALSE}
+ggplot(mobile_monitoring_year, aes(x = year, y = total_duration, fill = type)) +
+  geom_col() +
+  geom_hline(yintercept = 0, linewidth = 0.3) +
+  xlab("") +
+  ylab("Days") +
+  ggtitle("Total duration of mobile monitoring projects by calendar year") +
+  scale_fill_manual(values = c("#e41a1c","#377eb8","#cccccc"), name = "") +
+  theme_minimal() +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.position = "top")
+```
+
+The mobile monitoring team was reorganized after 2010, as TCEQ combined its emergency response and mobile monitoring programs into a single operation. Since then this team has conducted fewer proactive monitoring projects to identify emissions violations and has not consistently produced a summary report for each project.
+
+### On-site investigations of air pollution, including investigations with optical gas imaging cameras
+
+In addition to to the intensive projects run by the central monitoring team, the 16 regional offices of TCEQ run thousands of smaller on-site investigations of air pollution. We compiled data on the number of these investigations by fiscal year from reports [posted online](https://web.archive.org/web/20240920193823/https://www.tceq.texas.gov/compliance/enforcement/enforcement-reports/historical) by TCEQ. (TCEQ's fiscal year runs from September 1 of the prior calendar year to August 31 of the year in question.) Some of these investigations involved optical gas imaging cameras, which use infrared thermal imaging to detect and visualize gas leaks and emissions. We obtained data on these investigations through public records requests.
+
+```{r message=FALSE}
+# load data on investigations using optical gas imaging cameras
+ogic_investigations <- read_csv("data/ogic_investigations.csv") %>%
+  clean_names()
+
+# extract fiscal year from start dates
+ogic_investigations <- ogic_investigations %>%
+  mutate(status_dt = mdy(status_dt),
+         quarter = quarter(status_dt, with_year = TRUE, fiscal_start = 9),
+         fiscal_year = as.integer(str_sub(quarter, 1, 4)))
+
+# ogi camera investigations by fiscal year
+ogic_investigations_year <- ogic_investigations %>%
+  select(fiscal_year,invest_num) %>%
+  unique() %>%
+  group_by(fiscal_year) %>%
+  summarize(ogi = n())
+
+# load data on all on-site air pollution investigations
+on_site_air_year <- read_csv("data/on_site_air_investigations.csv") 
+
+# join to OGI camera investigations and process data for stacked column chart
+on_site_air_year <- inner_join(on_site_air_year,ogic_investigations_year) %>%
+  mutate(other = on_site_air - ogi) %>%
+  select(-on_site_air) %>%
+  pivot_longer(cols = c("ogi","other"), names_to = "type", values_to = "n") %>%
+  mutate(type = case_when(type == "ogi" ~ "OGI camera",
+                          TRUE ~ "Other"),
+         type = factor(type, levels = c("Other","OGI camera")))
+
+```
+
+```{r message=FALSE}
+ggplot(on_site_air_year, aes(x = fiscal_year, y = n, fill = type)) +
+  geom_col() +
+  geom_hline(yintercept = 0, linewidth = 0.3) +
+  xlab("") +
+  ylab("") +
+  ggtitle("On-site air pollution investigations by fiscal year") +
+  theme_minimal() +
+  scale_fill_manual(values = c("#cccccc","#e41a1c"), name = "") +
+  scale_y_continuous(labels = comma) +
+  scale_x_continuous(breaks = seq(2011,2023,2)) +
+  theme(panel.grid.major.x = element_blank(),
+        panel.grid.minor.x = element_blank(),
+        legend.position = "top")
+```
+
+### Investigations by mobile monitoring vans supplied to regional TCEQ offices
+
+In response to our analysis showing the reduced activity of its central mobile monitoring team, the TCEQ noted that in 2021, it supplied mobile monitoring vans to five of its regional offices. However, the equipment carried by these vans is less capable than those operated by the central mobile monitoring team and the vans do not engage in similarly intensive projects. Instead, they contribute to the smaller on-site investigations analyzed above. We obtained data on these mobile monitoring investigations through a public records request.
+
+```{r message=FALSE}
+# load data
+regional_mobile_monitoring <- read_csv("data/regional_mobile_vans.csv") %>%
+  clean_names() %>%
+  mutate(status_dt = mdy(inv_status_dt))
+
+# calculate number of investigations using these vans
+regional_mobile_monitoring %>%
+  summarize(n = n_distinct(inv_num),
+            `start date` = min(status_dt),
+            `end date` = max(status_dt)) %>%
+  kbl() %>%
+  kable_styling()
+```
+
+Between November 18, 2021 and September 3, 2024, the mobile monitoring vans operated by the TCEQ's regional offices contributed to 195 on-site investigations of air pollution.

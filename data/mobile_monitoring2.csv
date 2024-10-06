@@ -1,0 +1,75 @@
+project_trip,date_sampled,region,city_town,primary_target_compunds,purpose,emergency_response,analyzers,conclusions,personell,notes,start1,end1
+PL1606,"June 6 - 10 , 2016",12,"Pearland, TX","H2S, VOCs, TRS",Investigate odor complaints,,"Jerome J605, Picarro G1104, Teledyne 101E, RTGC",See report,"Manuel Gonzalez
+Maria Tran
+Tom Randolph
+Nathan Hoppens
+Peyton Pearce",,2016-06-06,2016-06-10
+ML1701,"January 18 - 20 , 2017",4,"Melissa, TX","H2S, TRS",Investigate odor complaints,,"Jerome, Picarro G1104, Teledyne 101E",No 30-min net H2S concentrations were observed above the 80 ppb state regulatory standard,"Manuel Gonzalez
+Maria Tran
+Tom Randolph
+Nathan Hoppens
+Peyton Pearce",,2017-01-18,2017-01-20
+WR1705,"May 9 - 11 , 2017",10,"Evadale, TX","H2S, TRS",Assess removal from APWL 1001,,"Jerome J605, Picarro G1104, Picarro G2204",No 30-min net H2S concentrations were observed above the 80 ppb state regulatory standard - but facility at 50% capacity,"Manuel Gonzalez
+Maria Tran
+Tom Randolph
+Nathan Hoppens
+Peyton Pearce",,2017-05-09,2017-05-11
+FB1712,"December 13 - 16 , 2017",12,"Missouri City, TX","H2S, VOCs, TRS",Investigate odor complaints due to a well blowout,yes,"Jerome J631X, TVA, Picarro G1104, Teledyne 101E, RTGC",See report,"Manuel Gonzalez
+Peyton Pearce
+Nathan Hoppens",,2017-12-13,2017-12-16
+IP1804,"April 4 , 2018",5,"Queen City, TX","H2S, TRS",APWL site (#APWL0501),,"Jerome J631X, Picarro G1104, Picarro G2204",30-min net H2S concentrations could not be collected but multiple 30-min averages were noted above the 80 ppb state regulatory standard. Plant either down or at half capacity during monitoring period,"Manuel Gonzalez
+Tom Randolph
+Peyton Pearce",,2018-04-04,2018-04-04
+PL1804,"April 24 - 26 , 2018",12,"Pearland, TX","H2S, methane",Investigate odor complaints,,Picarro,See data,"Manuel Gonzalez
+other staff not clear",No Summary report,2018-04-24,2018-04-26
+PL1805,"May 14 - 18 , 2018",12,"Pearland, TX","H2S, methane",Investigate odor complaints,,Picarro,See report,"Manuel Gonzalez
+other staff not clear",,2018-05-14,2018-05-18
+ITC1903-05,"March 18 - May 24 , 2019",12,"Deer Park, TX","H2S, SO2, 17 VOC compounds",Fire at ITC,yes,"RTGC, Picarro G2204, Teledyne 101E",See report,"Manuel Gonzalez
+Tom Randolph
+Nathan Hoppens
+Peyton Pearce",,2019-03-18,2019-05-24
+PB1912,"December 9 - 13 , 2019",7,"Midland, TX","H2S, SO2",Areas of concern identified by R7 or Emissions Event Database,,"Jerome J605, Picarro G2204, Teledyne 101E",See report,"Manuel Gonzalez
+Tom Randolph
+Nathan Hoppens
+Peyton Pearce",,2019-12-09,2019-12-13
+PB2002,"February 9 - 13 , 2020",,"Lubbock, TX and Midland, TX","H2S, SO2","Areas of concern identified by R2, R7, and the PB1912 report",,"Jerome J605, Picarro G2204, Teledyne 101E",See report,"Manuel Gonzalez
+Tom Randolph
+Nathan Hoppens
+Marie Stephensen",,2020-02-09,2020-02-13
+HL2008,"August 29 - September 16 , 2020",10,Beaumont area,"H2S, SIFT-MS regular VOCs list, Duvas list (SO2, BETX, 1,3-butadiene, styrene, ammonia, ozone, formaldehyde, NO, NO2)",Hurricane Laura response,yes,"SIFT-MS, Picarro, Duvas DV3000",See data,"Peyton Pearce
+Manuel Gonzalez
+Tom Randolph
+Nathan Hoppens
+Marie Stephensen",No Summary report,2020-08-29,2020-09-16
+HV2008,"August 6 , 2020",14,"Hallettsville, TX","H2S, Duvas list",R14 investigation of emissions from oil and gas production and storage,,"Duvas DV3000, Picarro G2204",Nothing was observed over associated regulatory levels,unclear,,2020-08-06,2020-08-06
+TF2008,"August 21 , 2020",14,"Corpus Christi, TX",Duvas list,Support R14 response to a propane fire in Tule Lake Channel,yes,Duvas DV3000,"SO2 was not detected, a maximum of 23.05 ppb toluene was detected, and a maximum of 12.97 ppb benzene was detected",unclear,,2020-08-21,2020-08-21
+HV2010,"October 8 , 2020",14,"Hallettsville, TX","H2S, SIFT-MS regular VOCs list",R14 investigation of emissions from oil and gas production and storage,,"SIFT-MS, Picarro G2204",No valid results were observed over associated regulatory levels,,,2020-10-08,2020-10-08
+DELTA2010,"October 10 - 12 , 2020",10,"Orange, TX","H2S, SIFT-MS regular VOCs list",Not clear,,"SIFT-MS, Picarro G2204",See data,unclear,No Summary report,2020-10-10,2020-10-12
+BH2012,"December 15 - 16 , 2020",14,"Alice, TX","H2S, Duvas list, SIFT-MS regular VOCs list",R14 investigation of emissions and odor complaints from citizens,,"SIFT-MS, Picarro G2204, Duvas DV3000",See report,unclear,,2020-12-15,2020-12-16
+WS2102,"February 22 - March 21 , 2021",,Texas coast?,"H2S, Duvas list, SIFT-MS regular VOCs list",Operations associated with winter storm and mass outages,yes,"SIFT-MS, Picarro G2204, Duvas DV3000",See data,,No Summary report,2021-02-22,2021-03-21
+FUG2106,"June 15 - 17 , 2021",10,Beaumont area,"1,3-butadiene, BTEX, ethylene oxide, and styrene","Fugitive Focused Emissions test survey trip, compare monitoring van results to onsite, mobile survey, and TPC fence line data",,SIFT-MS,See data,,No Summary report,2021-06-15,2021-06-17
+FUG2107,"July 6 - 8 , 2021",10,Beaumont area,"1,3-butadiene, BTEX, ethylene oxide, and styrene","Fugitive Focused Emissions test survey trip, compare monitoring van results to Lion Elastomers fence line data",,SIFT-MS,See data,,No Summary report,2021-07-06,2021-07-08
+LP2107,"July 20 - 26 , 2021",,"La Porte, TX","Acrylic acid, 1,3-butadiene, BTEX, ethylene glycol, and styrene",Not clear,,SIFT-MS,See data,,No Summary report,2021-07-20,2021-07-26
+HN2109,"September 15 - 16 , 2021",,"Houston, Freeport, Texas City, TX","SO2, BETX, 1,3-butadiene, styrene",Not clear,,Duvas DV3000,See data,"Nathan Hoppens, Marie Stephensen",No Summary report,2021-09-15,2021-09-16
+FUG2110 R10,"October 11 - 15 , 2021",10,Beaumont area,"1,3-butadiene, BTEX, ethylene oxide, and styrene","Fugitive Focused Emissions test survey trip, compare monitoring van results to onsite, mobile survey, and Indorama fence line data",,"SIFT-MS, Picarro",See data,,No Summary report,2021-10-11,2021-10-15
+FUG2110 R12,"October 25 - 29 , 2021",12,"Houston, TX","H2S, 1,3-butadiene, BTEX, and styrene","Fugitive Focused Emissions test survey trip, compare monitoring van results to onsite, mobile survey, and fence line data",,"SIFT-MS, Picarro",See data,,No Summary report,2021-10-25,2021-10-29
+CV2111,"November 7 - 11 , 2021",12,"Channelview, TX","1,3-butadiene, BTEX, and styrene",Elevated benzene concentrations were measured by the Channelview Drive Water Tower CAMS site 1036,,"SIFT-MS, Duvas DV3000","High concentrations of BTEX and 1,3-butadiene observed",Marie Stephensen,,2021-11-07,2021-11-11
+NL2112,"December 14 - 16 , 2021",10,"Nederland, TX","H2S, mercaptans",unclear,,"SIFT-MS, Picarro",See data- most readings were less than 3 ppb. Mercaptans detected during one survey up to 14 ppb,"Nathan Hoppens, unclear who else",No Summary report,2021-12-14,2021-12-16
+EP2204,"April 23 - 25 , 2022",6,El Paso,H2S,To determine potential sources of the H2S,,Picarro,unclear / no specific sources identified,"Manuel Gonzalez, Samir Subedi",,2022-04-23,2022-04-25
+CV2205,"April 22 - 24 , 2022",12,Channelview,"1,3-butadiene, BTEX, styrene, ethylene oxide","Continued monitoring of areas where previous elevated benzene readings were detected (first), then testing new SIFT-MS EtO method (second)",,"SIFT-MS, Duvas DV3000",no instantaneous benzene readings exceeded the project action level (80 ppb),"Nathan Hoppens, Samir Subedi, Molly Lyon, Peyton Pearce, Manuel Gonzalez",,2022-04-22,2022-04-24
+PB2206,"June 20 - 24 , 2022",7,Goldsmith (near Odessa),"H2S, BTEX",Continued monitoring of potential sources causing  CAMS 1093 (Goldsmith) H2S exceedances.,,"Picarro, Duvas DV3000, OGIC","See data- highest H2S readings (> were obtained donwind from Goldsmith GP, James Lake GP and tank batteries, and on the side of HW 158 E of Goldsmith","Peyton Pearce, Molly Lyon, Trent Pinion",,2022-06-20,2022-06-24
+PB2210,"October 10 - 13 , 2022",7,"Goldsmith and West Odessa, TX","H2S, BTEX+",To suppport Region 7 investigation of potential H2S emission sources,,"Picarro, SIFT-MS",See Report,"Molly Lyon, Dulce Chavez, Kangwook Kim, Peyton Pearce, Marie Stephensen",,2022-10-10,2022-10-13
+FWP2211,"November 2 - 3 , 2022",12,"Houston, TX","PM10, PM2.5, BTEX+","To determine background levels of PM10, PM2.5, and BTEX+",,"SIFT-MS, Nephelometer",See Report,"Marie Stephensen, Dulce Chavez",,2022-11-02,2022-11-03
+FWP2301,"January 25 - 27 , 2023",12,"Houston, TX","PM10, PM2.5, BTEX+","To determine background levels of PM10, PM2.5, and BTEX+",,"SIFT-MS, Nephelometer, Duvas DV3000",See Report,"Marie Stephensen, Molly Lyon, Kangwook Kim, Manuel Gonzalez",,2023-01-25,2023-01-27
+DP2305,"May 5 - 6 , 2023",12,"Deer Park, TX","BTEX+, SO2,",Response to fire at Shell Deer Park,yes,"SIFT-MS, Duvas (R12) DV3000",Fire extinguished,"Marie Stephensen, Dulce Chavez, Trent Pinion",NA,2023-05-05,2023-05-06
+CV2307,"July 31 , 2023 - August 4, 2023",12,"Channelview, TX","BTEX+, PM10, PM2.5",Elevated benzene concentrations were measured by the Channelview Drive Water Tower CAMS site 1036,,"SIFT-MS, Nephelometer",See  report,"Kangwook Kim, Manuel Gonzalez, Trent Pinion, Dulce Chavez",Draft w/ SM,2023-07-31,2023-08-04
+SW2308,"August 8 , 2023",4,"Garland, TX","BTEX+, H2S","Fire at Valspar Garland Sherwin Williams Facility in Garland, TX",yes,SIFT-MS,Fire extinguished,"Marie Stephensen, Dulce Chavez",NA,2023-08-08,2023-08-08
+SJ2311,"November 8 - 9 , 2023",10,"San Jacinto County, TX","BTEX+, isopropyl alcohol, hexane, PM10, PM2.5","Fire at Sound Resource Solutions near Shepherd, TX",yes,"SIFT-MS, Nephelometer",Fire extinguished,"Kangwook Kim
+Manuel Gonzalez",NA,2023-11-08,2023-11-09
+WB2312,"December 11 - 14 , 2023",5,"Winnsboro, TX","NH3, H2S, NO2, PM10, PM2.5, BTEX+, isovaleric acid, p-cresol, and butanoic acid",R5 investigation of emissions and odor complaints from citizens,,"SIFT-MS, Nephelometer, Picarro G2204",See Report,"Trent Pinion, Marie Stephensen, Dulce Chavez, Kangwook Kim, Manuel Gonzalez",Finalized,2023-12-11,2023-12-14
+VCC2401,"January 4 - 9 , 2024",14,"Victoria, TX","VOCs, H2S","Emergency response to large numbers of odor complaints from a spill at Sharmrock Terminal Facility near Victoria, TX",yes,"SIFT-MS, Picarro","No report, spill cleaned up","Marie Stephensen, Manuel Gonzalez, Molly Lyon, Trent Pinion",Data finalized,2024-01-04,2024-01-09
+MS2402,"February 20 - 23 , 2024",4,"Melissa, TX","VOCs specific to landfills, H2S",Large number of odor complaints from new neighborhoods around a landfill and feed lot,,"SIFT-MS, Picarro","Not able to identify significant levels of any compounds, concluded that there were too many compounds at low levels that weren't discernable from ambient air noise","Kangwook Kim, Manuel Gonzalez, Molly Lyon, Peyton Pearce",Draft with SM,2024-02-20,2024-02-23
+PB2405,"May 20 - 24 , 2024",7,"Big Spring, TX","H2S, BTEX+, SO2",Elevated SO2 concentrations above the target level of 400 ppbv based on 30-minute averages measured at the Big Spring Midway Continous Air Monitoring Station (CAMS) 1072,,"Picarro, SIFT-MS, Duvas",See Report,"Manuel Gonzalez, Trent Pinion",Draft with QAO,2024-05-20,2024-05-24
+ATX2405,"May 22 - 29 , 2024",11,"Austin, TX",Ethylene Oxide (EtO),Study for background EtO,,Picarro EtO,"Collect Baseline readings of EtO in various environments like suburan, urban, and rural areas where no industrial EtO source is present","Molly Lyon, Marie Stephensen",Data finalized,2024-05-22,2024-05-29
+HB2407,"July 8 - 12 , 2024",12,"Houston, TX","H2S, SO2, BTEX+",Monitoring after Hurricane,yes,"SIFT-MS, Duvas","On 7/10/2024 MA03 for Van 9427 (Duvas) observed elevated instantaneous benzene reading of 500 ppbv, OGIC footaged was unclear.  Winds and odors indicated the Benzene readings were coming from Exxon tanks.  Region 12 was contacted and they contacted Exxon.  Problem was resolved. No other elevated readings observed","Kangwook Kim, Trent Pinion",Draft validated data under review by TD,2024-07-08,2024-07-12
+HOU2407,"July 29 - Aug 2 , 2024",12,"Houston, TX",Ethylene Oxide (EtO),Study for background EtO,,Picarro EtO,"Collect Baseline readings of EtO in various environments like suburan, urban, industrial and rural areas where no industrial EtO source is present","Marie Stephensen, Anselmo Escamilla",NA,2024-07-29,2024-08-02
